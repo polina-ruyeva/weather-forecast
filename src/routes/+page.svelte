@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import CityInput from '../lib/components/CityInput.svelte';
+</script>
+
+<div class="container">
+    <h1 class="mt-5 mb-4">Wettervorhersage</h1>
+    <CityInput />
+</div>
