@@ -1,8 +1,16 @@
 <script>
+    import { getWeatherData } from '../../services/weather-service.js';
     let cityName = '';
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
+
+        try {
+            const weatherData = await getWeatherData(cityName);
+            console.log(weatherData);
+        } catch (error) {
+            console.error(error.message);
+        }
     }
 </script>
 
