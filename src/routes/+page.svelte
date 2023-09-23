@@ -3,6 +3,6 @@
 </script>
 
 <div class="container">
-    <h1 class="mt-5 mb-4">Wettervorhersage</h1>
+    <h1 class="mt-5 mb-4">Wetter</h1>
     <CityInput />
 </div>
