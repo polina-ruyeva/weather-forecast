@@ -5,7 +5,7 @@ async function fetchForecastData(cityName) {
     const response = await fetch(apiUrlForecast);
 
     if (!response.ok) {
-        throw new Error('API-Aufruf für apiUrlForecast fehlgeschlagen');
+        throw new Error('API call for apiUrlForecast failed');
     }
 
     return await response.json();
@@ -16,7 +16,7 @@ async function fetchOneCallData(lon, lat) {
     const response = await fetch(apiUrlOneCall);
 
     if (!response.ok) {
-        throw new Error('API-Aufruf für apiUrlOneCall fehlgeschlagen');
+        throw new Error('API call for apiUrlOneCall failed');
     }
 
     return await response.json();
@@ -29,7 +29,7 @@ export async function getWeatherData(cityName) {
         const oneCallData = await fetchOneCallData(lon, lat);
         return oneCallData;
     } catch (error) {
-        throw new Error('Fehler beim API-Aufruf: ' + error.message);
+        throw new Error('API call error: ' + error.message);
     }
 }
 

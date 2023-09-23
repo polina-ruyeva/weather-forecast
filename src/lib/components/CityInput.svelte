@@ -5,8 +5,8 @@
 
     let cityName = '';
     let weatherData;
-    let Forecast5DaysData; //ForecastFiveDays
-    let ForecastTodayData; //ForecastToday
+    let Forecast5DaysData;
+    let ForecastTodayData;
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -37,7 +37,7 @@
 {#if ForecastTodayData}
     <WeatherForecastToday  {ForecastTodayData}/>
 {/if}
-// maybe if else?
+
 {#if Forecast5DaysData}
     <WeatherForecastList {Forecast5DaysData} />
 {/if}
