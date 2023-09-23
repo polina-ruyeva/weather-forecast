@@ -13,11 +13,17 @@
 
         try {
             weatherData = await getWeatherData(cityName);
-            Forecast5DaysData = weatherData.daily.slice(1, 6);
-            ForecastTodayData = weatherData.daily[0];
         } catch (error) {
-            console.error(error.message);
+            try {
+                cityName = 'Berlin';
+                weatherData = await getWeatherData(cityName);
+            } catch (error) {
+                console.error(error.message);
+            }
         }
+
+        Forecast5DaysData = weatherData.daily.slice(1, 6);
+        ForecastTodayData = weatherData.daily[0];
     }
 </script>
 
